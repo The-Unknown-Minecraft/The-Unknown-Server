@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Starts the server and automatically restarts it if the process ends.
 
 while true; do
