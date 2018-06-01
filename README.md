@@ -18,6 +18,14 @@ Before (a new version of) a plugin is added, it should be checked if it creates 
 
 We use Docker to run the server in a container. Some people may find it easier to run the server without installing Docker. You will then have to install some additional programs. If you use Docker, you only have to install Docker.
 
+### Without Docker
+
+If you would like to run the server without Docker, you have to install Java 8 and [git-lfs](https://git-lfs.github.com/). Please note that we need specifically Java 8, because Sponge will currently not work on newer versions. You can check your Java version using the command `java -version`.
+
+1. First get the jars in `bin/` using `git lfs pull`
+1. Change directory to the `server` directory.
+1. Run `java -jar sponge.jar`, replacing `sponge.jar` with the name of the Sponge jar file (not the minecraft server jar).
+
 ### Production
 
 To run the server the same way as in production, you will need to install [Docker](https://www.docker.com) and [git-lfs](https://git-lfs.github.com/).
