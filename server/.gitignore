@@ -1,0 +1,11 @@
+# If you want to run the server, you have to accept the EULA.
+# Do not push eula=true.
+eula.txt
+
+# Privacy-related
+banned-ips.json
+banned-players.json
+usercache.json
+usernamecache.json
+world
+logs
