@@ -16,7 +16,7 @@ Before (a new version of) a plugin is added, it should be checked if it creates 
 
 ## Setting up the server
 
-We use Docker to run the server in a container. We also compile the server and most plugins from source. Some people may find it easier to run the server without installing Docker and compiling stuff. You will then have to install some additional programs. If you use Docker, you only have to install Docker.
+We use Docker to run the server in a container. Some people may find it easier to run the server without installing Docker. You will then have to install some additional programs. If you use Docker, you only have to install Docker.
 
 ### Production
 
@@ -24,13 +24,13 @@ To run the server the same way as in production, you will need to install [Docke
 
 1. First get the jars in `bin/` using `git lfs pull`
 1. Run `docker build -t the-unknown .`
-1. Run `docker run -dit --mount type=bind,source=$(pwd)/server,destination=/data -p 25565:25565 --name minecraft the-unknown:latest`. The first run may take considerable time, because it needs to compile the server and most plugins.
+1. Run `docker run -dit --mount type=bind,source=$(pwd)/server,destination=/data -p 25565:25565 --name minecraft the-unknown:latest`
 
-To view the logs, run `docker container logs minecraft`. To use the console, run `docker attach minecraft`. To detach from the console (but keep the server running), press `Ctrl + p` followed by `Ctrl q`.
+To view the logs, run `docker logs minecraft`. To use the console, run `docker attach minecraft`. To detach from the console (but keep the server running), press `Ctrl + p` followed by `Ctrl q`.
 
 Stop the server by running `stop` in the Minecraft console and pressing `Ctrl + c` when asked to.
 
-To start the server again, run `docker start minecraft`.
+To start the server again, run `docker start minecraft`. When any of the scripts in this repository is updated, you will need to re-build the image.
 
 ### World border
 
