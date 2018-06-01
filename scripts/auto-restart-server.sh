@@ -1,10 +1,8 @@
-#!/bin/bash
+#!/bin/sh
 # Starts the server and automatically restarts it if the process ends.
-# If the server crashes, but the process is still running, the server could
-# still restart depending on how that's configured in ../server/spigot.yml.
 
 while true; do
-    /scripts/start-server.sh
+    /scripts/launch.sh
 
     echo "If you want to completely stop the server process now, press Ctrl+C
           before the time is up!"
