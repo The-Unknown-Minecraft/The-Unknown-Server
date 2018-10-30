@@ -11,4 +11,5 @@ world
 logs
 
 # Misc
-antixray-cache
+mirage-cache
+.mixin.out
